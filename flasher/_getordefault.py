@@ -5,20 +5,20 @@ import contextlib
 
 
 class GetOrDefault:
-    data: t.Optional[dict, list, str]
+        data: t.Union[dict, list, str, None]
 
-    def __init__(self, dict_list_str: t.Optional[dict, list, str]):
+    def __init__(self, dict_list_str: t.Union[dict, list, str, None]):
         self.data = dict_list_str
 
-    def __call__(self, item, default=None):
+    def get(self, item, default):
         """
         get or default
         """
 
         try:
-            return self.data[item]  # key/index
-        except (KeyError, IndexError, TypeError):
-            return default  # default
+            return self.data[item]
+        except (KeyError, IndexError):
+            return default
 
     def __getitem__(self, item):
         """
