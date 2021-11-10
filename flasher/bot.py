@@ -43,7 +43,7 @@ class ShopeeBot:
             "referer": _urls.MALL_PREFIX,
             "if-none-match-": "*",
             "x-csrftoken": self.session.cookies.get("csrftoken"),
-            "user-agent": useragent.ANDROIDAPP
+            "user-agent": "Android app Shopee appver\u003d26921 app_type\u003d1"
         })
 
     def set_user_agent(self, ua: str):
