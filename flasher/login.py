@@ -10,6 +10,7 @@ import requests
 from . import _urls
 from .constant import useragent
 
+
 class Login:
     session: requests.Session
     user: str
