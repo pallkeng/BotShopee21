@@ -8,7 +8,7 @@ import typing as t
 
 import requests
 from . import _urls
-
+from .constant import useragent
 
 class Login:
     session: requests.Session
@@ -25,7 +25,7 @@ class Login:
             "referer": _urls.PREFIX,
             "if-none-match-": "*",
             "x-csrftoken": self.session.cookies.get("csrftoken"),
-            "user-agent": useragent.ANDROIDAPP
+            "user-agent": useragent.WEB
         })
         self.session.post("https://shopee.co.id/buyer/login")
         self.user_type = {
