@@ -35,7 +35,7 @@ def int_input(prompt_: str, max_: int = -1, min_: int = 1) -> int:
             elif input_int > max_:
                 ERROR << "Angka terlalu banyak!"
                 continue
-                elif input_int < min_:
+            elif input_int < max_:
                 ERROR << "Angka terlalu sedikit!"
                 continue
                 
