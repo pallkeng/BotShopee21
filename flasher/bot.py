@@ -5,7 +5,7 @@ import typing as t
 import requests
 from . import _urls, _getordefault
 from .types import User, Item, CartItem, Payment
-from .constant import useragent
+
 
 
 class ShopeeBot:
