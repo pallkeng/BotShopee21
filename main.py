@@ -115,7 +115,7 @@ def main():
             print('\t', Fore.LIGHTBLUE_EX, "Stok:", Fore.GREEN, model.stock)
             print('\t', Fore.LIGHTBLUE_EX, "ID Model:", Fore.GREEN, model.model_id)
             line()
-            
+
         print()
         selected_model = int_input("Pilihan: ", len(item.models))-1
         print()
@@ -134,7 +134,7 @@ def main():
     if selected_payment_channel.has_option():
         for index, option in enumerate(selected_payment_channel.option_keys()):
             print(f"{Fore.GREEN}[{index+1}] {Fore.BLUE}{option}")
-            
+
         print()
         for index, option in enumerate(selected_payment_channel.option_keys()):
         
